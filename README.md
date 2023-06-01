@@ -40,7 +40,7 @@ RewriteRule . index.php
 
 ```
  
-## เปลี่ยนภาษา
+## ทำเว็บ2ภาษา
 ```
 php yii message/config @backend/config/i18n.php
 php yii message/config @fontend/config/i18n.php
@@ -57,4 +57,8 @@ return [
     'Fonts' => 'Chakra Petch',
 
 ];
+```
+ใช้งาน
+```php
+Yii::t('app', 'Home'),
 ```
