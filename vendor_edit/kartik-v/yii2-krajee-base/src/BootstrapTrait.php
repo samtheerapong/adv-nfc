@@ -280,7 +280,7 @@ trait BootstrapTrait
      */
     protected function configureBsVersion()
     {
-        $v = empty($this->bsVersion) ? ArrayHelper::getValue(Yii::$app->params, 'bsVersion', '5') :
+        $v = empty($this->bsVersion) ? ArrayHelper::getValue(Yii::$app->params, 'bsVersion', '3') :
             $this->bsVersion;
         $this->_bsVer = static::parseVer($v);
 

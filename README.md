@@ -62,3 +62,23 @@ return [
 ```php
 Yii::t('app', 'Home'),
 ```
+
+
+## เปลี่ยนเป็น bootstrap5
+1. แก้ file config/params.php
+```php
+<?php
+return [
+    'bsVersion' => '5',
+    'adminEmail' => 'admin@example.com',
+];
+```
+2. แก้ vendor/dektrium ค้นหา bootstrap ให้เปลี่ยนเป็น bootstrap5
+ตัวอย่าง
+```php
+use yii\bootstrap\Nav;
+
+ให้เปลี่ยนเป็น
+
+use yii\bootstrap5\Nav;
+```
