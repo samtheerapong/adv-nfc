@@ -8,8 +8,8 @@
 </p>
 -------------------
 
-# backend & frontend main-local.php
-```
+## backend & frontend main-local.php
+```php
 'urlManager' => [
     'class' => 'yii\web\urlManager',
     'enablePrettyUrl' => true,
@@ -24,8 +24,8 @@
     ],
 ```
 
-# web/.htacess 
-```
+## web/.htacess 
+```php
 Options +FollowSymLinks
 RewriteEngine On
 
@@ -36,4 +36,22 @@ RewriteCond %{REQUEST_FILENAME} !-d
 # Otherwise, redirect everything to index.php
 RewriteRule . index.php
 
+```
+ 
+## เปลี่ยนภาษา
+```
+php yii message/config @backend/config/i18n.php
+php yii message/config @fontend/config/i18n.php
+```
+create file backend\massages\th\app.php
+
+```php
+<?php
+return [
+    // *** config
+    'Fonts' => 'Chakra Petch',
+    // *** navbar
+    'Home' => 'หน้าหลัก',
+
+];
 ```
