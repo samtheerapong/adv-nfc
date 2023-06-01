@@ -8,7 +8,9 @@
 </p>
 -------------------
 
-## backend & frontend main-local.php
+## เปลี่ยน URL แบบสวยงาม 
+ปิดใช้งาน index.php?r=
+แก้ไขไฟล์ backend & frontend main-local.php ใน components
 ```php
 'urlManager' => [
     'class' => 'yii\web\urlManager',
@@ -24,7 +26,7 @@
     ],
 ```
 
-## web/.htacess 
+แล้วเพิ่มไฟล์ web/.htacess 
 ```php
 Options +FollowSymLinks
 RewriteEngine On
