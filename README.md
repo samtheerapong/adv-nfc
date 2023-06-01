@@ -43,15 +43,16 @@ RewriteRule . index.php
 php yii message/config @backend/config/i18n.php
 php yii message/config @fontend/config/i18n.php
 ```
-create file backend\massages\th\app.php
+สร้างไฟล์ file backend\massages\th\app.php
+สร้างไฟล์ file fontend\massages\th\app.php
 
 ```php
 <?php
 return [
+    // *** ตัวอย่าง
+    'Home' => 'หน้าหลัก',
     // *** config
     'Fonts' => 'Chakra Petch',
-    // *** navbar
-    'Home' => 'หน้าหลัก',
 
 ];
 ```
