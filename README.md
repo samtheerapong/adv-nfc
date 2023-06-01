@@ -84,7 +84,7 @@ use yii\bootstrap5\Nav;
 ```
 ** ข้อควรระวัง เวลาเปลี่ยน version หรือ composer update อาจจะกลับค่าเดิม
 
-## custom.css
+## ปรับแต่ง เปลี่ยน font ใน custom.css
 
 นำไปใส่ใน tag head ของ file main ของ theme
 ```html
