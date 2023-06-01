@@ -82,3 +82,4 @@ use yii\bootstrap\Nav;
 
 use yii\bootstrap5\Nav;
 ```
+** ข้อควรระวัง เวลาเปลี่ยน version หรือ composer update อาจจะกลับค่าเดิม
