@@ -93,9 +93,7 @@ use yii\bootstrap5\Nav;
 แล้วสร้างไฟล์ custom.css ไว้ที่ web/css/custom.css
 เปลี่ยน fonts google 
 ```css
-@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400&&family=Kanit&family=Itim&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/sweetalert2@11");
 
 /* font */
 * {
