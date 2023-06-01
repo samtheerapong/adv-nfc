@@ -83,3 +83,24 @@ use yii\bootstrap\Nav;
 use yii\bootstrap5\Nav;
 ```
 ** ข้อควรระวัง เวลาเปลี่ยน version หรือ composer update อาจจะกลับค่าเดิม
+
+## custom.css
+
+นำไปใส่ใน tag head ของ file main ของ theme
+```html
+<link href="<?= Yii::$app->request->baseUrl ?>/css/custom.css" rel="stylesheet">
+```
+แล้วสร้างไฟล์ custom.css ไว้ที่ web/css/custom.css
+เปลี่ยน fonts google 
+```css
+@import url("https://use.fontawesome.com/releases/v5.3.1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400&&family=Kanit&family=Itim&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/sweetalert2@11");
+
+/* font */
+* {
+  font-family: "Chakra Petch", sans-serif;
+  /* font-family: 'Kanit', sans-serif; */
+  /* font-family: 'Itim', cursive; */
+}
+```
