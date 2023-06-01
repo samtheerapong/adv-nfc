@@ -10,19 +10,66 @@ return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
-    'bootstrap' => ['log'],
-    'modules' => [],
+    'bootstrap' => ['log', 'yii\bootstrap5\BootstrapAsset',],
+    'modules' => [
+
+        'operator' => [
+            'class' => 'backend\modules\operator\Module',
+        ],
+
+        'report' => [
+            'class' => 'common\modules\report\Module',
+        ],
+
+        // person 
+        'person' => [
+            'class' => 'backend\modules\person\Module',
+        ],
+
+        // Admin
+        'admin' => [
+            'class' => 'mdm\admin\Module',
+            'layout' => 'left-menu'
+        ],
+
+        // User
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'enableUnconfirmedLogin' => false,
+            'confirmWithin' => 21600,
+            'cost' => 12,
+            'admins' => ['admin']
+        ],
+
+        // RBAC
+        'rbac' => [
+            'class' => 'dektrium\rbac\RbacWebModule',
+            // 'layout' => '@app/views/layouts/rbac.php', 
+        ],
+
+        // kartik gridview
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module'
+        ],
+    ],
+
     'components' => [
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@backend/views' => '@backend/themes'
+                ],
+            ],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'dektrium\user\models\User',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the backend
             'name' => 'backend',
         ],
         'log' => [
